@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Анимационный сайт с блоками</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S7VFHJDK5Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S7VFHJDK5Q');
+</script>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+  }
+
+  /* Заголовок */
+  header {
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3em;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease forwards;
+  }
+
+  /* Основной контейнер */
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Разделы */
+  h2 {
+    margin-top: 50px;
+    font-size: 2em;
+    color: #00ffff;
+    border-bottom: 2px solid #00ffff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  /* Блоки по 2 в строке */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  /* Карусель */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    min-width: 300px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.3);
+    transition: transform 0.3s;
+  }
+
+  /* Навигация карусели */
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .btn {
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background-color: #009999;
+    transform: scale(1.05);
+  }
+
+  /* Анимации */
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>Artificial IntelligenT</h1>
+</header>
+
+<div class="content">
+
+  <section>
+    <h2>Когда появился?</h2>
+    <div class="grid">
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>История появления AI.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Этапы развития.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Ключевые достижения.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Вехи истории.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>AI сегодня</h2>
+    <div class="grid">
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Современные технологии AI.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Области применения.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Инновации в AI.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Кейсы использования.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Работа с AI</h2>
+    <div class="grid">
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Инструменты и платформы.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Обучение моделей.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Практические советы.</p>
+      </div>
+      <div class="block" style="background:#1a1a1a; padding:15px; border-radius:10px;">
+        <p>Ресурсы и курсы.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Что дальше?</h2>
+    <div class="carousel" id="carousel">
+      <div class="carousel-inner" id="carouselInner">
+        <div class="slide">
+          <h3>Будущее AI</h3>
+          <p>Перспективы развития технологий.</p>
+        </div>
+        <div class="slide">
+          <h3>Этические вопросы</h3>
+          <p>Проблемы и вызовы.</p>
+        </div>
+        <div class="slide">
+          <h3>Инновации</h3>
+          <p>Новые идеи и направления.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="btn" id="prevBtn">Назад</button>
+      <button class="btn" id="nextBtn">Вперед</button>
+    </div>
+  </section>
+
+</div>
+
+<footer style="text-align:center; padding:20px; background: rgba(0,0,0,0.2); margin-top:50px;">
+  &copy; 2025 Artificial IntelligenT
+</footer>
+
+<script>
+  const carouselInner = document.getElementById('carouselInner');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  function updateCarousel() {
+    const offset = -currentIndex * (slides[0].offsetWidth + 20);
+    carouselInner.style.transform = `translateX(${offset}px)`;
+  }
+
+  prevBtn.onclick = () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  };
+
+  nextBtn.onclick = () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  };
+
+  // Обновляем при изменении размера окна
+  window.onresize = updateCarousel;
+
+  // Изначально
+  updateCarousel();
+</script>
+
+</body>
+</html>
