@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /directives.html
 Disallow: / characters.html
 Allow: / index.html
-Sitemap: https://l1lp0ssy.github.io/laba_2/-/sitemap.xml
+Sitemap: https://l1lp0ssy.github.io/-/sitemap.xml
